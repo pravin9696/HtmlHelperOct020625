@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/myStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        <form method="post" action="/Home/Index1">
+            <input type="text" name="txtName" />
+            <input type="submit" value="Submit" />
+        </form>
+
+    </div>
+    <div>
+        <br />
+        *******************************************************************
+        <br />
+        @*default value of Html.begin Form  ActionMethod=>currentActionMethod(ie Index) Controller=>"Home"     Method==>Post*@
+        @using (@Html.BeginForm("Index1", "Home", FormMethod.Post))
+        {
+            <input type="text" name="txtName" />
+            <br />
+            @Html.TextBox("txtLastName")  @*//only form Name and ID property only*@
+            <br />
+            @Html.TextBox("txtAge","", new {PlaceHolder="enter Age",@class= "abcd" })  @*// 2 para  1 para for Name & ID  and 2 para for Value*@
+            <br />
+            @Html.TextArea("txtAddress", new {@class="abcd",rows=5})
+            <input type="submit" value="Submit" />
+        }
+
+
+
+
+
+    </div>
+             @Html.ActionLink("click Me...","Method1","Home")
+             <br />
+               <a href="/Home/Method1">click me 2.....</a>
+   
+</body>
+</html>
