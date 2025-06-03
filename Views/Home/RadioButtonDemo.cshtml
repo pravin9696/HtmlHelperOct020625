@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RadioButtonDemo</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Select Gender:")<br />
+
+            @Html.RadioButton("Gender", "Male")@Html.Label("Male")
+            <br />
+            @Html.RadioButton("Gender", "Female")@Html.Label("Female")
+            <br />
+            <hr />
+            @Html.Label("Select Course:")<br />
+
+            @Html.RadioButton("Course", "JAVA")@Html.Label("Full stack JAVA developer")
+            <br />
+            @Html.RadioButton("Course", "Dot Net")@Html.Label("Full Stack Dot net developer")
+            <br />
+            @Html.RadioButton("Course", "Python")@Html.Label("Full Stack Python developer")
+            <br />
+            <input type="submit" value="Submit" />
+        }
+    </div>
+</body>
+</html>

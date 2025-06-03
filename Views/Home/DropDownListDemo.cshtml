@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DropDownListDemo</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Select Course:")<br />
+
+            @Html.DropDownList("course", new SelectList(ViewBag.PrgLangList, "ID", "Name"))// value,display
+            <br />
+
+            @Html.DropDownList("OtherCourse", new SelectList(ViewBag.PrgLangList, "Name", "Name"),"Select Other Course")
+            <br />
+            @Html.DropDownList("City", new SelectList(ViewBag.cityList),"--Select City--", new { multiple=true})
+            <input type="submit" value="Submit" />
+        }
+    </div>
+</body>
+</html>

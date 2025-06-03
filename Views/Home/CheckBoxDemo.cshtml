@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CheckBoxDemo</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Select Languages:")
+            <br />
+            @Html.CheckBox("Marathi", true) @Html.Label("Marathi")
+            <br />
+            @Html.CheckBox("Hindi", false) <span>Hindi</span>
+            <br />
+            @Html.CheckBox("English") @Html.Label("English")
+            <br />
+            <input type="submit" value="Submit" />
+        }
+    </div>
+</body>
+</html>
