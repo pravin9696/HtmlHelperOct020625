@@ -1,0 +1,27 @@
+﻿@model  HtmlHelperOct020625.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddEmp</title>
+</head>
+<body>
+    <div>
+        <h3>Add Employee Information</h3>
+        <br />
+        @using (Html.BeginForm())
+        {
+            @Html.LabelFor(x => x.Id) @Html.TextBoxFor(x => x.Id)<br />
+            @Html.LabelFor(x => x.Name) @Html.TextBoxFor(x => x.Name)<br />
+            @Html.LabelFor(x => x.Salary) @Html.TextBoxFor(x => x.Salary)<br />
+            @Html.LabelFor(x => x.Dept) @Html.TextBoxFor(x => x.Dept)<br />
+            <input type="submit" value="Add Employee" />
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model HtmlHelperOct020625.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddStudent</title>
+</head>
+<body>
+    <div>
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Roll Number :")@Html.TextBoxFor(x => x.RollNo)
+            <br />
+            @Html.LabelFor(x => x.Name) @Html.TextBoxFor(x => x.Name)
+            <br />
+            @Html.LabelFor(x => x.TotalMarks)@Html.TextBoxFor(Y => Y.TotalMarks)
+            <br />
+            @Html.LabelFor(X => X.Address) @Html.TextAreaFor(x => x.Address)
+            <br />
+            @Html.Label("Select your Choice:")
+            @Html.CheckBoxFor(x => x.MessRequired, false)<span>Mess facility Requried</span><br />
+            @Html.CheckBoxFor(x => x.HostelRequired, true)<span>Hostel facility Requried</span><br />
+            @Html.Label("select Your Course")<br />
+            @Html.RadioButtonFor(x => x.course, "Engineering")<span>Engg</span><br />
+            @Html.RadioButtonFor(x => x.course, "MCA")<span>MCA</span><br />
+            @Html.RadioButtonFor(x => x.course, "MBA")<span>MBA</span><br />
+
+            <input type="submit" value="Submit" />
+        }
+    </div>
+</body>
+</html>
